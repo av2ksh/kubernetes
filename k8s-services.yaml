@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-port-flask-deployment
+  labels:
+   owner: Andrei-Rahatka
+   env: prod
+spec:
+  selector:
+    app: flask-app #pods only
+  ports:
+  - port: 80
+    targetPort: 80  #pods port
